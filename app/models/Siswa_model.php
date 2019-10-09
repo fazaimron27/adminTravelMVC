@@ -1,6 +1,7 @@
 <?php
 
-class Siswa_model {
+class Siswa_model
+{
 	private $table = 'siswa';
 	private $db;
 
@@ -26,7 +27,7 @@ class Siswa_model {
 	{
 		$query = "INSERT INTO siswa
 							VALUES
-							('', :nama, :nis, :email, :jurusan)";
+							(default, :nama, :nis, :email, :jurusan)";
 
 		$this->db->query($query);
 		$this->db->bind('nama', $data['nama']);
